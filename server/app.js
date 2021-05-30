@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 
 //const hostname = '10.138.0.2';
-hostname = '127.0.0.1';
+hostname = '0.0.0.0';
 
 const port = 3000;
 
