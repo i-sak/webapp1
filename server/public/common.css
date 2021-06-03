@@ -21,3 +21,17 @@ a {
     list-style: none;
     padding-left: 0;
 }
+
+.navbar_menu li {
+    padding:8px 12px;   /*위아래, 양옆*/
+}
+
+.navbar_icons {
+    list-style: none;
+    color:white;
+    display: flex;
+}
+
+.navbar_icons li {
+    padding: 8px 12px;
+}
