@@ -1,14 +1,18 @@
+:root {
+    --text-color: #f0f4f5;
+}
+
 * {color:cornsilk;}
 body {
     margin: 0;
     background-color: black;
-    
+    font-family: 'Source Sans Pro', sans-serif;
 }
 a {
     text-decoration: none;
-    color:white;
-    
+    color:var(--text-color);
 }
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -16,22 +20,76 @@ a {
     background-color: #080616;
     padding:8px 12px;
 }
+.navbar_logo span{
+    color : darkorange;
+    font-size: x-large;
+}
+
 .navbar_menu {
     display: flex;
     list-style: none;
     padding-left: 0;
 }
 
-.navbar_menu li {
+.navbar_menu li { /*메뉴끼리의 간격*/
     padding:8px 12px;   /*위아래, 양옆*/
+}
+.navbar_menu li:hover
+{
+    background-color: darkorange;
+    border-radius: 4px;
 }
 
 .navbar_icons {
     list-style: none;
     color:white;
     display: flex;
+    padding-left: 0;
 }
 
 .navbar_icons li {
     padding: 8px 12px;
+}
+.navbar_toggleBtn {
+    display: none;
+    position: absolute;
+    top:12px;
+    right: 16px;
+    font-size: 24px;
+}
+.navbar_toogleBtn i {color:darkorange}
+
+@media screen and (max-width: 768px) {
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding:8px 24px;
+    }
+
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_menu li {
+        width: 100%;
+        text-align:center;
+    }
+
+    .navbar_icons{
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar_toggleBtn {
+        display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active {
+        display: flex;
+    }
 }
