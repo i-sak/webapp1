@@ -97,6 +97,7 @@ a {
 /** iframe style **/
 div.contents {padding:0; margin: 0;}
 div.contents iframe{
-    width:99.4%;
-    height: 99%;
+    border: none;
+    width:99vw;
+    height: 90vh; /* view-port height */
 }
